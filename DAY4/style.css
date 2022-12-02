@@ -1,0 +1,196 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height:100vh;
+    width: 100%;
+    background-color:rgb(208, 249, 235); 
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    animation: anima 1s infinite;
+}  
+
+nav{
+    display: flex;
+    padding:2% 6%;
+    justify-content: space-between;
+    align-items: center;
+} 
+nav image{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: rgb(16, 14, 14);
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width:0%;
+    height:2px;
+    background: rgba(255, 51, 71, 0.999);  
+    display: block;
+    margin: auto;
+    transition: 0.8s;
+}
+
+.nav-links ul li:hover::after{
+    width:100%;
+
+}
+.text-box{
+    width: 90%;
+    color:rgb(23, 20, 20);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+    animation: bounce 1s infinite;
+}
+.text-box h3{
+    font-size: 20px;
+    animation: me 1s infinite;
+}
+
+.text-box i{
+    color: rgb(243, 160, 109);
+    animation: move 8s infinite;
+}
+.text-box p{
+    margin:10px 0 40px;
+    font-size: 14px;
+    color:rgb(16, 15, 15)
+}
+.text-box a{
+    color:rgb(14, 13, 13);
+}
+.hero-btn{
+    display:inline-block;
+    text-decoration: none;
+    border: 1px solid rgb(23, 19, 19);
+    padding:12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.hero-btn:hover{
+    border: 1px solid rgba(8, 12, 12, 0.999);
+    background:rgba(255, 51, 51, 0.999);
+    padding:15px 38px;
+    color: rgb(245, 229, 229);
+    transition: 0.6s;
+
+}
+nav .fa{
+    display: none; 
+}
+@media(max-width:700px){
+    
+    
+    .text-box h1{
+        font-size: 20px;
+    }
+
+    .nav-links ul li{
+        display:block;
+    }
+      .nav-links{
+        position: fixed;
+        background: rgba(255, 51, 78, 0.999);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.6s;
+    }
+   nav .fa{
+        display: block;
+        color: rgb(18, 15, 15);
+        margin:10px;
+        font-size: 22px;
+        cursor: pointer;
+
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+    .cta{
+        font-size: 24px;
+    }
+    .sub-header h1{
+        font-size: 24px;
+    }
+    
+    .text-box img{
+        width: fit-content;
+    }
+
+}
+
+@keyframes bounce{
+    0%{
+        background-color: rgb(180, 246, 224);
+    }
+
+    100%{
+        background-color: rgb(240, 54, 54);
+    }
+}
+
+@keyframes anima{
+    0%{
+        background-color: rgb(180, 246, 224);
+    }
+
+    100%{
+        background-color: rgb(133, 246, 139);
+    }
+}
+
+@keyframes move{
+    0%{
+       margin-left: -1000px;
+    }
+    100%{
+        margin-left: 1000px;
+    }
+}
+
+@keyframes me{
+    0%{
+       color: black;
+    }
+    100%{
+       color: rgb(238, 250, 12);
+    }
+}
